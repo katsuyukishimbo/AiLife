@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from rest_framework import generics
 from .serializers import UserSerializer
 
 class UserList(generics.ListCreateAPIView):
-  queryset = User.objects.all()
+  queryset = ettings.AUTH_USER_MODEL.objects.all()
   serializer_class = UserSerializer
